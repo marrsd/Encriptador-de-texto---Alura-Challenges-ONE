@@ -1,0 +1,366 @@
+
+* {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #F3F5FC;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    margin: 40px 40px 0 40px;
+}
+
+main {
+    height: calc(100vh - 90px);
+    margin: 0 40px 0 40px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+button {
+    border-radius: 24px;
+    width: 270px;
+    height: 60px;
+    margin: 4px;
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+section:first-child {
+    width: 70%;
+    padding: 50px 0 0 90px;
+    position: relative;
+    vertical-align: top;
+    height: 100%;
+}
+
+section:first-child #backgroundAnimation {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
+    right: 120px;
+    width: 30%;
+    bottom: 220px;
+}
+
+section:first-child .pasteEffect {
+    width: auto;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    position: absolute;
+    left: 10px;
+    top: 70px;
+    box-shadow: 9px 20px 15px 0 #ababab4d;
+    animation: press 2s infinite;
+}
+
+section:first-child #pasteBtn img {
+    width: 40px;
+}
+
+section:first-child textarea {
+    background-color: #ffffff47;
+    width: 90%;
+    color: #0A3871;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    height: 60%;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+section:first-child textarea::placeholder {
+    color: #0A3871;
+}
+
+section:first-child #containerRulesAndBtns  {
+    position: absolute;
+    bottom: 40px;
+}
+
+section:first-child #rules {
+    color: #495057;
+    font-size: 12px;
+}
+
+section:first-child #encrypt {
+    background-color: #0A3871;
+    border: none;
+    color: #FFFFFF
+}
+
+section:first-child #decrypt {
+    background-color: #D8DFE8;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+
+section:nth-child(2) {
+    background-color: white;
+    position: relative;
+    top: -60px;
+    vertical-align: top;
+    border-radius: 32px;
+    width: 25%;
+    box-shadow: 0px 24px 32px -8px #00000014;
+    margin: 0 20px 0 20px;
+    height: 106%;
+    padding: 30px;
+    z-index: 1;
+}
+
+section:nth-child(2) #decryptedArea {
+    height: 85%;
+    overflow-y: hidden;
+}
+
+section:nth-child(2) #decryptedArea:hover {
+    overflow-y: scroll;
+    transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+  
+section:nth-child(2) #decryptedArea:hover::-webkit-scrollbar {
+    display: block;
+    transition: all 1s ease-in-out;
+}
+
+section:nth-child(2) #decryptedArea::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+  }
+  
+section:nth-child(2) #decryptedArea::-webkit-scrollbar-thumb {
+    background-color: #cacaca;
+    border-radius: 20px;
+}
+  
+section:nth-child(2) #decryptContainer {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+section:nth-child(2) div img {
+    width: 250px;
+}
+
+section:nth-child(2) div h3 {
+    font-weight: 700;
+    padding: 0 50px;
+    text-align: center;
+    color: #343A40;
+    font-size: 20px;
+}
+
+section:nth-child(2) div p {
+    line-height: 24px;
+    text-align: center;
+    color: #495057;
+    font-size: 15px;
+}
+
+section:nth-child(2) #copyBtn {
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+section:nth-child(2) #copyBtn:active {
+    animation: press 0.2s linear;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #d62828;
+    color: white;
+}
+
+.modal-body {
+    padding: 15px 16px;
+}
+
+.modal-body p {
+    text-align: center;
+    font-size: 20px;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation: animatetop 0.4s;
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #0A3871;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+
+@keyframes press {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.92);
+    }
+    to {
+      transform: scale(1);
+    }
+}
+
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    main {
+        margin: 20px 20px;
+    }
+
+    section:first-child {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        height: 50%;
+    }
+
+    section:first-child .pasteEffect {
+        position: absolute;
+        width: 60px;
+        left: auto;
+        top: -40px;
+        right: 20px;
+    }
+
+    section:first-child #containerRulesAndBtns {
+        position: static;
+        text-align: center;
+    }
+
+    section:nth-child(2) {
+        position: static;
+        width: 100%;
+        margin: 0;
+        height: auto;
+    }
+
+    section:nth-child(2) #decryptedArea {
+        height: 150px;
+    }
+
+    section:nth-child(2) #decryptContainer {
+        margin: 20px;
+    }
+
+    section:nth-child(2) div img {
+        display: none;
+    }
+
+    section:nth-child(2) div h3 {
+        margin-bottom: 0;
+    }
+
+    section:nth-child(2) #copyBtn {
+        width: 100%;
+    }
+}
+
+@media(max-width: 540px) {
+    
+    button {
+        height: 40px;
+    }
+
+    section:first-child {
+        height: 65%;
+    }
+    
+    section:first-child #containerRulesAndBtns {
+        margin-top: 20px;
+    }
+
+    #pasteBtn {
+        height: 60px;
+    }
+
+    footer {
+        margin-top: 100px;
+    }
+}
