@@ -14,9 +14,9 @@ Las "llaves" de encriptación que se usan son las siguientes:
 
 ## Tecnologías usadas
 
-    * HTML5
-    * CSS5
-    * Vanilla Javascript
+* HTML5
+* CSS5
+* Vanilla Javascript
 
 ## Objetivos de aprendizaje
 
@@ -24,29 +24,31 @@ Objetivos de aprendizaje aplicados en este proyecto:
 
 ### Javascript
 
-    * [ ] Variables
-    * [ ] Uso de condicionales
-    * [ ] Uso de funciones
-    * [ ] Manipular arrays
-    * [ ] Eventos
-    * [ ] Manipular el DOM
-    * [ ] Scope
+- [ ] Variables
+- [ ] Uso de condicionales
+- [ ] Uso de funciones
+- [ ] Manipular arrays
+- [ ] Eventos
+- [ ] Manipular el DOM
+- [ ] Scope
 
 ### HTML
-    * [ ] HTML Semántico
-    * [ ] Etiquetas
+
+- [ ] HTML Semántico
+- [ ] Etiquetas
 
 ### CSS
-    * [ ] Estilos en cascada
-    * [ ] Pseudo-clases
-    * [ ] Pseudo-elementos
-    * [ ] Selectores
-    * [ ] Responsive
-    * [ ] Posicionamiento
-    * [ ] Flexbox
+
+- [ ] Estilos en cascada
+- [ ] Pseudo-clases
+- [ ] Pseudo-elementos
+- [ ] Selectores
+- [ ] Responsive
+- [ ] Posicionamiento
+- [ ] Flexbox
 
 ### Git y GitHub
 
-    * [ ] Uso de comandos de git
-    * [ ] Manejo de repositorios de GitHub
-    * [ ] Organización en Github
+- [ ] Uso de comandos de git
+- [ ] Manejo de repositorios de GitHub
+- [ ] Organización en Github
