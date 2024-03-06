@@ -22,13 +22,19 @@ textToEncrypt.addEventListener('input', () => {
     }
 });
 
+
+textToEncrypt.addEventListener('keyup', function() {
+    this.value = this.value.toLowerCase();
+});
+
+
+
 function encryptText() {
-    let textToEncryptLowerCase = textToEncrypt.value.toLowerCase();
-    if(/^[^áéíóúàèìòùäëïöüãõâêôîû|\d]+$/.test(textToEncryptLowerCase)) {
+    if(/^[^áéíóúàèìòùäëïöüãõâêôîû|\d]+$/.test(textToEncrypt.value)) {
         
         switchElementsForDecryptZone();
 
-        converting(codes, textToEncryptLowerCase, 0, 1);
+        converting(codes, textToEncrypt.value, 0, 1);
     }
      else {
         validation("¡Números y acentos no son permitidos!. Inténtalo de nuevo.", 0);
@@ -40,7 +46,7 @@ function decryptText() {
 
         switchElementsForDecryptZone();
 
-        converting(codes, textToEncrypt.value, 1, 0);
+        converting(codes.reverse(), textToEncrypt.value, 1, 0);
     } else {
         validation("Intenta encriptando el texto.", 0);
     }
@@ -85,8 +91,9 @@ function converting(codes, entry, x, y) {
     let newWord = entry;
 
     codes.forEach(i => {
-        if(newWord.includes(i[x])){
-            newWord = newWord.replace(i[x], i[y]);
+        if (newWord.includes(i[x])) {
+            const regex = new RegExp(`${i[x]}`, 'gi')
+            newWord = newWord.replace(regex, i[y]);
         }
     })
     newWord === entry ? validation("Ups! Parece que ya está desencriptado. Intenta encriptar", 500) : null;
